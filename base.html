@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>Aarav's Website</title>
+</head>
+
+<body>
+    <h1>Mental Health Quiz</h1>
+        <button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+        {% if data %}
+        <p><b>Results: {{data}}</b></p>
+        {% endif %}
+<!--    {% if data %}-->
+<!--    {{data}}-->
+<!--    {% endif %}-->
+
+
+<!--        <form action="base.html">-->
+<!--            First Name: <br>-->
+<!--            <input type="text" name="first_name">-->
+<!--        </br>-->
+<!--            Last Name:<br>-->
+<!--            <input type="text" name="last_name">-->
+<!--        </br>-->
+<!--            Email:<br>-->
+<!--            <input type="text" name="email">-->
+<!--        <br>-->
+<!--            <input type="submit" name="Submit">-->
+<!--        </form>-->
+
+<!--        <p><b>City : </b>-->
+<!--        <select name="name" class="form-control" method="post">-->
+
+<!--            <option value="0">Select Option</option>-->
+<!--            <option value="1">olongapo City</option>-->
+<!--            <option value="2">Angeles City</option>-->
+<!--            <option value="3">Davao City</option>-->
+<!--        </select>-->
+<!--    </p>-->
+<!--    <button type="submit">Submit</button>-->
+
+    <form method="post">
+        {% csrf_token %}
+        <label>Little interest or pleasure in doing things?:</label>
+        <select name="name">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Feeling down, depressed, or hopeless?:</label>
+        <select name="name1">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Trouble falling asleep, staying asleep, or sleeping too much?:</label>
+        <select name="name2">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Poor appetite or overeating?:</label>
+        <select name="name3">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Feeling bad about yourself - or that you are a failure or have let yourself or your family down?:</label>
+        <select name="name4">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Trouble concentrating on things, such as reading the newspaper or watching television?:</label>
+        <select name="name5">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?:</label>
+        <select name="name6">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <label>Thoughts that you would be better off dead, or of hurting yourself?:</label>
+        <select name="name7">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+
+<!--        Last Name : <input type="text" name="name1">-->
+
+<!--    </form>-->
+
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        read Name : <input type="text" name="name2">-->
+<!--        <button type="submit">Submit</button>-->
+
+<!--</form>-->
+
+</body>
+</html>
